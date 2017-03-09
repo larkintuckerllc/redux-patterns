@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 
-const myArray = (state = [], action) => {
+const adder = (state = [], action) => {
   switch (action.type) {
     case 'ADD':
       // state.push(action.value); // BREAKS PURE FUNCTION
@@ -10,7 +10,7 @@ const myArray = (state = [], action) => {
       return state;
   }
 };
-const store = createStore(myArray);
+const store = createStore(adder);
 store.subscribe(() =>
   // eslint-disable-next-line
   console.log(store.getState())
