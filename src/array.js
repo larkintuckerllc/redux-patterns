@@ -1,3 +1,4 @@
+/* eslint no-console: "off" */
 import { createStore } from 'redux';
 
 const adder = (state = [], action) => {
@@ -11,10 +12,9 @@ const adder = (state = [], action) => {
   }
 };
 const store = createStore(adder);
-store.subscribe(() =>
-  // eslint-disable-next-line
-  console.log(store.getState())
-);
+store.subscribe(() => {
+  console.log(store.getState());
+});
 store.dispatch({ type: 'ADD', value: 'apple' });
 store.dispatch({ type: 'ADD', value: 'banana' });
 store.dispatch({ type: 'ADD', value: 'cranberry' });

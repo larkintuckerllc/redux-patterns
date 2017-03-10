@@ -1,3 +1,4 @@
+/* eslint no-console: "off" */
 import { createStore } from 'redux';
 
 const adder = (state = [], action) => {
@@ -13,7 +14,6 @@ const store = createStore(adder);
 let lastState = store.getState();
 store.subscribe(() => {
   const newState = store.getState();
-  // eslint-disable-next-line
   console.log(newState === lastState);
   lastState = newState;
 });

@@ -1,3 +1,4 @@
+/* eslint no-console: "off" */
 import { createStore } from 'redux';
 
 const counter = (state = 0, action) => {
@@ -11,10 +12,9 @@ const counter = (state = 0, action) => {
   }
 };
 const store = createStore(counter);
-store.subscribe(() =>
-  // eslint-disable-next-line
-  console.log(store.getState())
-);
+store.subscribe(() => {
+  console.log(store.getState());
+});
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DECREMENT' });
