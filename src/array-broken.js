@@ -14,6 +14,7 @@ const store = createStore(adder);
 let lastState = store.getState();
 store.subscribe(() => {
   const newState = store.getState();
+  console.log(newState);
   console.log(newState === lastState);
   lastState = newState;
 });
