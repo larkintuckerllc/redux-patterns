@@ -3,7 +3,8 @@ import { combineReducers, createStore } from 'redux';
 
 const byId = (state = {}, action) => {
   switch (action.type) {
-    case 'ADD': {
+    case 'ADD':
+    case 'UPDATE': {
       const entry = {};
       entry[action.value.id] = action.value;
       return {
@@ -73,4 +74,12 @@ store.dispatch({
     name: 'nectarine',
     description: 'Crunchy goodness',
   }],
+});
+store.dispatch({
+  type: 'UPDATE',
+  value: {
+    id: 'm',
+    name: 'mango',
+    description: 'Sweet and super sticky',
+  },
 });
