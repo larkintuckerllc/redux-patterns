@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "normalizr": "^3.2.2",
     "redux": "^3.6.0"
   },
   "devDependencies": {
