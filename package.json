@@ -9,8 +9,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "immutable": "^3.8.1",
     "normalizr": "^3.2.2",
     "redux": "^3.6.0",
+    "redux-immutable": "^4.0.0",
     "reselect": "^3.0.0"
   },
   "devDependencies": {
