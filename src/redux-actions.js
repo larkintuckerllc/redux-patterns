@@ -110,7 +110,7 @@ store.subscribe(() => {
   const newState = store.getState();
   const newItems = getItems(newState);
   console.log(newItems === lastItems);
-  console.log(newItems); // NEW
+  console.log(newItems); // ADDED FOR CLARITY
   lastItems = newItems;
 });
 // EXERCISING
